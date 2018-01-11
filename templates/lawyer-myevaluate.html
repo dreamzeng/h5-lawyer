@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的评价</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../styles/css/null-page.css?v=lz201707151879">
+    <link rel="stylesheet" href="../styles/css/base-evaluate-list.css?v=lz201707151879">
+    <link rel="stylesheet" href="../styles/css/lawyer-myevaluate.css?v=lz201707151879">
+    <script src="../libs/reset-min.js"></script>
+    <script src="../libs/base-min.js"></script>
+</head>
+<body>
+    <div class="page-box" id="pageContainer">
+        <div class="null-box" v-if="pageObj.nullPage">
+            <div class="null-box-content">
+                <img src="../images/null-logo.png" class="null-img">
+                <p class="null-txt">暂无评价</p>
+            </div>
+        </div>
+        <div id="has-info" v-if="pageObj.listPage">
+            <section class="section1">
+                <div class="lawyer-evaluate clearfix">
+                    <div class="lawyer-img">
+                        <img :src="laywerImg">
+                    </div>
+                    <div class="evaluate-box">
+                        <div class="start-box clearfix">
+                            <span class="start startfull" v-for="info in getNum(dataLawyer.lawyerStars)"></span>
+                            <span class="start" v-for="info in (5-getNum(dataLawyer.lawyerStars))"></span>
+                        </div>
+                        <p class="evaluate-txt">综合评价：<span v-html="dataLawyer.avgScore"></span></p>
+                        <div class="evaluate-tab-box" @click="go_allTabs($event.currentTarget)" v-bind:data-lno="pageObj.lawyerId">
+                            <div class="clearfix">
+                                <span class="evaluate-tab" v-for="(item,index) in dataLawyer.labels" v-if="index<3">
+                                    <span class="evaluate-tab-txt">
+                                        <em v-html="item.name"></em>
+                                        <em>(<em v-html="item.count"></em>)</em>
+                                    </span>
+                                </span>
+                                <span class="evaluate-tab-more"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section2">
+                <div class="section2-box">
+                    <div class="evaluate-list-more" @click="go_evaluate_all($event.currentTarget)" v-bind:data-lno="pageObj.lawyerId">
+                        <span>全部评价</span>
+                        <span class="evaluate-list-more-logo"></span>
+                    </div>
+                    <ul class="evaluate-list-box">
+                        <li class=""  v-for="(item,index) in dataLawyer.comments" v-if="index<10">
+                            <div class="evaluate-info clearfix">
+                                <div class="p-img">
+                                    <img :src="item.commenterLogo">
+                                </div>
+                                <div class="p-info">
+                                    <span class="p-name" v-html="item.commenterName"></span>
+                                    <span class="p-time" v-html="item.commentTime"></span>
+                                </div>
+                                <div class="p-e-level clearfix">
+                                    <span class="start startfull" v-for="info in getNum(item.stars)"></span>
+                                    <span class="start" v-for="info in (5-getNum(item.stars))"></span>
+                                </div>
+                            </div>
+                            <div class="evaluate-tab-box clearfix">
+                                <span class="evaluate-tab" v-for="tabinfo in item.labels">
+                                    <em v-html="tabinfo.name"></em>
+                                </span>
+                            </div>
+                            <div class="order-box clearfix" @click="go_severDetail($event.currentTarget)" v-bind:data-serverId="item.goodsUuid">
+                                <img :src="item.goodsImageUrl" class="order-img">
+                                <div class="order-info">
+                                    <p class="order-info-txt"><em v-html="item.goodsName"></em> <em v-if="item.specCombDesc" v-html="'('+item.specCombDesc+')'"></em></p>
+                                    <p class="order-info-price">￥<em v-html="item.amount"></em></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div id="defaultFix" class="default-fix"  v-if="pageObj.defalutFix"></div>
+    </div>
+</body>
+</html>
+<script src="../libs/jquery.min.js"></script>
+<script src="../libs/fastclick.min.js"></script>
+<script src="../libs/common.js"></script>
+<script src="../libs/vue.min.js"></script>
+<script src="../plugins/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+<script src="../scripts/lawyer-myevaluate.js?v=lz201707151876"></script>

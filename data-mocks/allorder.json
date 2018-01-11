@@ -1,0 +1,128 @@
+{
+    "code": 1,
+    "msg": "查询成功",
+    "data": [
+      {
+            "orderNo": "1217580602301645928",
+            "amount": "100.00",
+            "goodsImageUrl": "../images/img1.jpg",
+            "goodsName": "只是产权",
+            "priceConfirm": 0,
+            "priceStart": "100.00",
+            "state": 9,
+            "createTime": "2017-06-30 12:02:58",
+            "lawyerId": 1926
+        },
+          {
+            "orderNo": "1217580602301645928",
+            "amount": "100.00",
+            "goodsImageUrl": "../images/img1.jpg",
+            "goodsName": "只是产权",
+            "priceConfirm": 1,
+            "priceStart": "100.00",
+            "priceEnd": "200.00",
+            "state": 9,
+            "createTime": "2017-06-30 12:02:58",
+            "lawyerId": 1926
+        },
+        {
+            "orderNo": "1217580602301645928",
+            "amount": "100.00",
+            "goodsImageUrl": "../images/img1.jpg",
+            "goodsName": "只是产权",
+            "priceConfirm": 0,
+            "priceStart": "100.00",
+            "state": 10,
+            "createTime": "2017-06-30 12:02:58",
+            "lawyerId": 1926
+        },
+          {
+            "orderNo": "1217580602301645928",
+            "amount": "100.00",
+            "goodsImageUrl": "../images/img1.jpg",
+            "goodsName": "只是产权",
+            "priceConfirm": 1,
+            "priceStart": "100.00",
+            "priceEnd": "500.00",
+            "state": 10,
+            "createTime": "2017-06-30 12:02:58",
+            "lawyerId": 1926
+        },
+        {
+            "orderNo": "14170406311312376154",
+            "amount": "0.01",
+            "goodsImageUrl": "../images/img1.jpg",
+            "goodsName": "企业法律顾问（半年包）",
+            "priceConfirm": 1,
+            "priceStart": "10.00",
+            "priceEnd": "50.00",
+            "state": 11,
+            "createTime": "2017-06-13 14:31:04",
+            "payTime": "2017-06-13 14:31:19",
+            "urge": true,
+            "lawyerId": 1926
+        },
+          {
+            "orderNo": "14170406311312376154",
+            "amount": "0.01",
+            "goodsImageUrl": "../images/img1.jpg",
+            "goodsName": "企业法律顾问（半年包）",
+            "priceConfirm": 1,
+            "priceStart": "10.00",
+            "priceEnd": "50.00",
+            "state": 11,
+            "createTime": "2017-06-13 14:31:04",
+            "payTime": "2017-06-13 14:31:19",
+            "urge": false,
+            "lawyerId": 1926
+        },
+         {
+            "orderNo": "14170406311312376154",
+            "amount": "0.01",
+            "goodsImageUrl": "../images/img1.jpg",
+            "goodsName": "企业法律顾问（半年包）",
+            "priceConfirm": 0,
+            "priceStart": "10.00",
+            "priceEnd": "50.00",
+            "state": 11,
+            "createTime": "2017-06-13 14:31:04",
+            "payTime": "2017-06-13 14:31:19",
+            "lawyerId": 1926
+        },
+         {
+            "orderNo": "1217580602301645928",
+            "amount": "100.00",
+            "goodsImageUrl": "../images/img1.jpg",
+            "goodsName": "只是产权",
+            "priceConfirm": 0,
+            "priceStart": "100.00",
+            "state": 14,
+            "createTime": "2017-06-30 12:02:58",
+            "lawyerId": 1926
+        },
+         {
+            "orderNo": "1217580602301645928",
+            "amount": "100.00",
+            "goodsImageUrl": "../images/img1.jpg",
+            "goodsName": "只是产权",
+            "priceConfirm": 1,
+            "priceStart": "100.00",
+            "priceEnd": "100.00",
+            "state": 15,
+            "createTime": "2017-06-30 12:02:58",
+            "lawyerId": 1926
+        },
+         {
+            "orderNo": "1217580602301645928",
+            "amount": "100.00",
+            "goodsImageUrl": "../images/img1.jpg",
+            "goodsName": "只是产权",
+            "priceConfirm": 1,
+            "priceStart": "100.00",
+            "priceEnd": "100.00",
+            "state": 20,
+            "createTime": "2017-06-30 12:02:58",
+            "lawyerId": 1926
+        }
+    ]
+}

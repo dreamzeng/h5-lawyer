@@ -1,0 +1,52 @@
+{
+  "code": 1,
+  "msg": "评价列表",
+  "data": {
+    "count": {
+      "allCount": 100,
+      "goodCount": 52,
+      "mediumCount": 30,
+      "badCount": 999
+    },
+    "comments":{
+      "total":1,
+      "page":1,
+      "items":[
+        {
+          "commenterLogo": "http://192.168.10.224/upload/user/1927/8ee392f8ff14487d8b683e339b91be38.jpg",
+          "commenterName": "我是差评",
+          "stars": 5,
+          "commentTime": "2017-12-01 14:47:51",
+          "labels": [
+            {
+              "name": "专业程度高"
+            }
+          ],
+          "goodsUuid": "152",
+          "goodsImageUrl": "http://192.168.10.217:1080/upload/config/goods/e294f5121a464c93a3acbd251540591f.png",
+          "orderUuid": "c31753ded06611e7ac59fa163e2a8c32",
+          "goodsName": "人事纠纷",
+          "amount": "2000",
+          "specCombDesc": "D轮 小规模 一年"
+        },
+        {
+          "commenterLogo": "http://192.168.10.224/upload/user/1927/8ee392f8ff14487d8b683e339b91be38.jpg",
+          "commenterName": "我是差评",
+          "stars": 5,
+          "commentTime": "2017-12-01 14:47:51",
+          "labels": [
+            {
+              "name": "专业程度高"
+            }
+          ],
+          "goodsUuid": "152",
+          "goodsImageUrl": "http://192.168.10.217:1080/upload/config/goods/e294f5121a464c93a3acbd251540591f.png",
+          "orderUuid": "c31753ded06611e7ac59fa163e2a8c32",
+          "goodsName": "人事纠纷",
+          "amount": "2000",
+          "specCombDesc": "D轮 小规模 一年"
+        }
+      ]
+    }
+  }
+}

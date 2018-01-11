@@ -1,0 +1,54 @@
+{
+  "code": 1,
+  "msg": "查询成功",
+  "data": {
+    "id": 330,
+    "orderNo": "1417570739151685719",
+    "amount": "0.01",
+    "govermentPrice": "5", 
+    "goodsImageUrl": "http://d01.fl580.com/my/marketing/e/2/1396783/album/thumb_20160414173121.jpg",
+    "goodsId": 2,
+    "goodsName": "合同审查",
+    "priceConfirm": 1,
+    "priceStart": "1000.00",
+    "priceEnd": "1000.00",
+    "unit": "起",
+    "state":{
+        "code":14,
+        "value":"待交付"
+      },
+    "createTime": "2017-07-15 14:39:57",
+    "payTime": "2017-07-15 14:40:06",
+    "lawyerId": 1926,
+    "userName": "方阳gg",
+    "userPhone": "15217694050",
+    "realUserPhone":"15217699999",
+    "userId": 1925,
+    "lawyerName": "毛祥哥",
+    "lawyerPhone": "13798452435",
+    "lawyerImageUrl": "http://d01.fl580.com/my/marketing/e/2/1396783/album/thumb_20160414173121.jpg",
+    "lawyerCompany": "按时打算",
+    "urge":true,
+    "remark": "我的需求很简单, 能不能让我去支付啊~~~~~",
+    "specCombDesc":"A轮 大规模 半年",
+    "commented":1,
+    "type": {
+      "code": 9,
+      "value": "律师服务"
+    },
+    "lawyerFiles":[
+      {
+        "infoId": 925,
+        "name": "png",
+        "id": 220,
+        "url": "http://d01.fl580.com/my/marketing/e/2/1396783/album/thumb_20160414173121.jpg"
+      },
+      {
+        "infoId": 925,
+        "name": "1.png",
+        "id": 221,
+        "url": "http://d01.fl580.com/my/marketing/e/2/1396783/album/thumb_20160414173121.jpg"
+      }
+    ]
+  }
+}

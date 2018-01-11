@@ -1,0 +1,155 @@
+/********* global style ************/
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    display: block;
+}
+ul{
+    list-style:none;
+}
+*,*:before,*:after{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*:focus {
+    outline: none;
+}
+.Thread{
+    position: relative;
+}
+.Thread:after{
+    content: "";
+    position: absolute;
+    display:block;
+    top:-50%;
+    left:-50%;
+    right:-50%;
+    bottom:-50%;
+    border: 1px solid #b0b0b0;
+    /*border: 1px solid red;*/
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clearfix:after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+.default-fix {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 30;
+    top: 0;
+    left: 0;
+}
+/************* page style ****************/
+html,body{
+    height: auto;
+    background-color: #f0f2f5;
+}
+body section{
+    background: #fff;
+    margin-bottom: 0.3rem;
+    padding: 0 0.3rem 0.3rem;
+    overflow: hidden;
+}
+section h1{
+    font-size: 0.44rem;
+    margin-bottom: 0.34rem;
+    color: #202020;
+}
+section h2{
+    font-size: 0.32rem;
+    margin-bottom: 0.30rem;
+    color: #202020;
+}
+.section1{
+    margin-top: 0.40rem;
+}
+.price-box{
+    margin-bottom: 0.2rem;
+}
+.price-now{
+    margin-right: 0.2rem;
+    color: #f53;
+
+}
+.price-box em{
+    font-size: .24rem;
+}
+.price-box b{
+    font-size: 0.36rem;
+    font-weight: normal;
+
+}
+.price-old b{
+    text-decoration:line-through;
+}
+.price-txt{
+    font-size: 0.24rem;
+    color: #b0b0b0;
+}
+.price-old{
+    margin-left: 0.6rem;
+    margin-right: 0.2rem;
+    font-size: 0.28rem;
+    color: #999;
+}
+.server-kind-box{
+    margin-bottom: 0.16rem;
+}
+.server-kind-box label{
+    float: left;
+    padding-top: 0.1rem;
+    margin-right: 0.3rem;
+    font-size: 0.24rem;
+    color: #9a9a9a;
+}
+.server-kind{
+    float: left;
+    width: 5.4rem;
+}
+.server-kind li{
+    float: left;
+    margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
+    padding: 0.1rem 0.2rem;
+    display: block;
+}
+.server-introduce{
+    padding-bottom: 0.2rem;
+    font-size: 0.28rem;
+    color: #666;
+}
+.section-globel{
+    padding-top: 0.40rem;
+}
+.read-box{
+    font-size: 0.28rem;
+    color:#6d6d6d;
+}
+.rundown{
+    margin-bottom: 0.4rem;
+}
+.normal-line{
+    margin: 0 auto;
+    width: 6.9rem;
+    height: 3.21rem;
+    background: url("../../images/normal-line.jpg") no-repeat;
+    background-size: 100% auto;
+}
+.fast-line{
+    margin: 0 auto;
+    width: 6.76rem;
+    height: 1.2rem;
+    background: url("../../images/fast-line.png") no-repeat;
+    background-size: 100% auto;
+}
+body section:last-child{
+    margin-bottom: 0;
+}

@@ -1,0 +1,121 @@
+{
+  "code": 1,
+  "msg": "律师评价",
+  "data":{
+    "lawyerId":12,
+    "lawyerLogo":"http://localhost:63342/h5-lawyer/images/userImg.png",
+    "lawyerStars":5,
+    "avgScore":4.5,
+    "labels":[
+      {
+        "name":"标签1",
+        "count":"11"
+      },
+      {
+        "name":"标签2标签2标签2标签2标签2",
+        "count":"22"
+      },
+      {
+        "name":"标签3",
+        "count":"333"
+      },
+      {
+        "name":"标签4",
+        "count":"4444"
+      }
+    ],
+    "comments": [
+      {
+        "commenterLogo": "http://resource.hao13322.com/user/lawyer_1.png",
+        "commenterName": "张三",
+        "stars": 4,
+        "commentTime": "2017-11-30 19:32:50",
+        "goodsUuid": 22,
+        "goodsBizLogo": "http://192.168.10.217:1080/upload/config/goods/e294f5121a464c93a3acbd251540591f.png",
+        "orderTitle": "人事纠纷",
+        "totalPrice": "2000",
+        "labels": [
+          {
+            "name": "很好1"
+          },
+          {
+            "name": "很好2"
+          },
+          {
+            "name": "很好3"
+          },
+          {
+            "name": "很好4"
+          }
+        ],
+        "goodsUuid": "1998",
+        "goodsImageUrl": "http://192.168.10.217:1080/upload/config/goods/e294f5121a464c93a3acbd251540591f.png",
+        "orderUuid": "c31753ded06611e7ac59fa163e2a8c32",
+        "goodsName": "人事纠纷",
+        "amount": "2000",
+        "specCombDesc":"D轮 小规模 一年"
+      },
+      {
+        "commenterLogo": "http://resource.hao13322.com/user/lawyer_1.png",
+        "commenterName": "张4",
+        "stars": 3,
+        "commentTime": "2017-11-30 19:32:50",
+        "goodsUuid": 22,
+        "goodsBizLogo": "http://192.168.10.217:1080/upload/config/goods/e294f5121a464c93a3acbd251540591f.png",
+        "orderTitle": "人事纠纷",
+        "totalPrice": "2000",
+        "labels": [
+          {
+            "name": "很好1"
+          },
+          {
+            "name": "很好2"
+          },
+          {
+            "name": "很好3"
+          },
+          {
+            "name": "很好4"
+          }
+        ],
+        "goodsUuid": "330",
+        "goodsImageUrl": "http://192.168.10.217:1080/upload/config/goods/e294f5121a464c93a3acbd251540591f.png",
+        "orderUuid": "c31753ded06611e7ac59fa163e2a8c32",
+        "goodsName": "人事纠纷",
+        "amount": "2000",
+        "specCombDesc":""
+      },
+      {
+        "commenterLogo": "http://resource.hao13322.com/user/lawyer_1.png",
+        "commenterName": "张5",
+        "stars": 3,
+        "commentTime": "2017-11-30 19:32:50",
+        "goodsUuid": 22,
+        "goodsBizLogo": "http://192.168.10.217:1080/upload/config/goods/e294f5121a464c93a3acbd251540591f.png",
+        "orderTitle": "人事纠纷",
+        "totalPrice": "2000",
+        "labels": [
+          {
+            "name": "很好1"
+          },
+          {
+            "name": "很好2"
+          },
+          {
+            "name": "很好3"
+          },
+          {
+            "name": "很好4"
+          }
+        ],
+        "goodsUuid": "330",
+        "goodsImageUrl": "http://192.168.10.217:1080/upload/config/goods/e294f5121a464c93a3acbd251540591f.png",
+        "orderUuid": "c31753ded06611e7ac59fa163e2a8c32",
+        "goodsName": "人事纠纷",
+        "amount": "2000",
+        "specCombDesc":"D轮 小规模 一年"
+      }
+    ]
+  }
+
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>服务详情</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../styles/css/null-page.css?v=lz201707151879">
+    <link rel="stylesheet" href="../styles/css/lawyer-server.css?v=lz201707151879">
+    <script src="../libs/reset-min.js"></script>
+    <script src="../libs/base-min.js"></script>
+</head>
+<body>
+    <div class="page-box" id="pageContainer">
+        <div class="detailPage" v-show="pageObj.detailPage">
+            <section class="section1">
+                <h1 v-html="serverName"></h1>
+                <div class="price-box">
+                    <span class="price-now"><em>￥</em><b v-html="proposedPrice"></b></span>
+                    <span class="price-txt">参考价</span>
+                    <span class="price-old"><em>￥</em><b v-html="marketPrice"></b></span>
+                    <span class="price-txt">市场价</span>
+                </div>
+                <div class="server-kind-box clearfix">
+                    <div  v-for="(item,index) in data.specs">
+                        <label ><em v-html="item.specName"></em>:</label>
+                        <ul class="server-kind">
+                            <li class="Thread" v-for="item2 in item.specAttrs" v-html="item2.specAttrName"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="server-introduce" v-html="data.descr"></div>
+            </section>
+            <section class="section-globel">
+                <h2>服务内容</h2>
+                <div class="read-box" v-html="data.content"></div>
+            </section>
+            <section class="section-globel">
+                <h2>服务时间</h2>
+                <div class="read-box" v-html="data.serviceTimeDesc"> </div>
+            </section>
+            <section class="section-globel">
+                <h2 class="rundown">服务流程</h2>
+                <div class="normal-line" ></div>
+            </section>
+            <section class="section-globel">
+                <h2>提交材料</h2>
+                <div class="read-box" v-html="data.submitInformation"></div>
+            </section>
+            <section class="section-globel">
+                <h2>服务须知</h2>
+                <div class="read-box" v-html="data.bizFaq"></div>
+            </section>
+        </div>
+        <div id="defaultFix" class="default-fix" v-show="pageObj.defalutFix"></div>
+    </div>
+</body>
+</html>
+<script src="../libs/jquery.min.js"></script>
+<script src="../libs/fastclick.min.js"></script>
+<script src="../libs/common.js"></script>
+<script src="../libs/vue.min.js"></script>
+<script src="../plugins/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+<script src="../scripts/lawyer-server.js?v=lz201707151876"></script>

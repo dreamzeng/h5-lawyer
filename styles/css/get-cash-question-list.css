@@ -1,0 +1,55 @@
+html{
+    background-color: #fff;
+}
+.mui-content>.mui-table-view:first-child{
+    margin-top: 0;
+}
+.mui-table-view{
+    padding:0 .48rem;
+}
+.mui-table-view li:nth-child(1){
+    padding-top: .6rem;
+}
+.mui-table-view-cell{
+    padding: .3rem 0 .4rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: .3rem;
+}
+.mui-table-view-cell.mui-collapse>.mui-navigate-right:after, .mui-table-view-cell.mui-collapse>.mui-push-right:after{
+    content: '\e583';
+}
+.mui-table-view-cell.mui-collapse.mui-active>.mui-navigate-right:after, .mui-table-view-cell.mui-collapse.mui-active>.mui-push-right:after{
+    content: '\e581';
+}
+.mui-table-view-cell.mui-active{
+    background-color: #fff;
+}
+.mui-table-view-cell.mui-collapse .mui-collapse-content{
+    margin-top:5px;
+    padding-left: 2.6rem;
+    padding-top: 0;
+}
+.mui-table-view-cell p{
+    padding-bottom: 3px;
+    color: #999;
+    padding-right: 5px;
+
+}
+.mui-navigate-right:after, .mui-push-right:after{
+    right: .34rem;
+}
+.mui-table-view-cell>a:not(.mui-btn){
+    margin: 0;
+    padding: .3rem 0;
+    color:#333;
+
+}
+.mui-table-view:after{
+    height: 0;
+}
+.mui-table-view-cell:last-child:after, .mui-table-view-cell:last-child:before{
+    height:0px;
+}
+.mui-table-view-cell:after{
+    height: 0px;
+}

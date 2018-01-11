@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>律师-我的订单详情</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../styles/css/mui.min.css">
+    <link rel="stylesheet" href="../styles/css/lawyer-order-details.css?v=lz201707151879">
+    <link rel="stylesheet" href="../styles/css/mui-preview.css">
+    <script src="../libs/reset-min.js"></script>
+    <script src="../libs/base-min.js"></script>
+</head>
+
+<body>
+<div id="pageContainer">
+    <section class='border section1'>
+        <div class="service-p progress">
+            <div class=" m_progress_bar">
+                 <div class="lineBlock bar_wrap">
+                 <div class="circle">
+                 <span class='active'><i><em></em></i><b></b></span>
+                 <span><i><em></em></i><b></b></span>
+                 <span><i><em></em></i><b></b></span>
+                 <span><i><em></em></i></span></div>
+                 <div class="bar_wrap_cont" style="width:0%;"></div>
+                 </div>
+                 <div class="lineBlock bar_sale">
+                </div> 
+            </div>
+            <ul>
+                 <li class='active' ><span class='pro_sell' data-sell='0'>未支付</span></li>
+                 <li><span>已支付</span></li>
+                 <li><span>已交付</span></li>
+                 <li><span>交易完成</span></li>
+            </ul>
+        </div>
+        <div class="service-p state" v-if="data.type.value=='律师服务'||data.type.value=='知识产权'">
+            <span class="red"  v-if="data.state.code==10" v-html="state_type"></span>
+            <span class="green" v-if="data.state.code==11||data.state.code==12||data.state.code==13" v-html="state_type"></span>
+            <span class="pay"  v-if="data.state.code==20||data.state.code==14||data.state.code==15"  v-html="state_type"></span>
+            <!-- <span v-if="data.state.code!=0" v-html="data.state.value" class="pay"></span> -->
+             <span v-if="data.state.code!=0" v-html="state" class="pay" ></span>
+        </div>
+        <div class="service-p state" v-if="data.type.value=='快速咨询'">
+            <span class="red"  v-if="data.state.code==10" v-html="state_type"></span>
+            <span class="green" v-if="data.state.code==11||data.state.code==12||data.state.code==13" v-html="state_type"></span>
+            <span class="pay"  v-if="data.state.code==20||data.state.code==14||data.state.code==15"  v-html="state_type"></span>
+        </div>
+    </section>
+
+    <section class="border section2">
+        <div class=" service-info">
+            <div class="service-box ">
+            <!-- <span class="mui-icon mui-icon-arrowright"></span> -->
+            <div class="service-detail" @click="go_severDetail($event.currentTarget)" v-bind:data-sNO="data.goodsId">
+                <img :src="data.goodsImageUrl">
+                <div class="server-name">
+                    <span><em v-html="data.goodsName"></em><em v-if="data.specCombDesc" v-html="'('+data.specCombDesc+')'"></em></span>
+                    <span v-html="price" class="service-phone">￥</span>
+                </div>
+            </div>
+            <div class="service-order">
+                 <div v-if="data.createTime" class="service-p">
+                        <label>订 单 编 号 : </label>
+                        <span v-html="data.orderNo"></span>
+                 </div>
+                 <div v-if="data.createTime"  class="service-p">
+                    <label>下 单 时 间 :</label>
+                    <span v-html="data.createTime"></span>
+                 </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section id="remarkId" class="border section2-1">
+        <div>
+        <span class='user_right'>
+         <a href="javascript:;" class="mui-btn mui-btn-primary " @click="contactUser">发起对话</a>
+        </span>
+          <div class="user_left">
+               <div v-if="data.createTime" class="service-p">
+                        <label>用&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;&nbsp;名 : </label>
+                        <span v-html="data.userName"></span>
+                    </div>
+                    <div v-if="data.createTime" class="service-p" v-bind:rphone="data.realUserPhone">
+                        <label>联 系 方 式 : </label>
+                        <span class='blue' v-html="data.userPhone" v-if="data.type.value=='律师服务'||data.type.value=='知识产权'"   @click="callPhone"></span>
+                        <span class='blue' v-html="data.userPhone" v-if="data.type.value=='快速咨询'" @click="callPhone"></span>
+                </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="section4" class="section4" v-if="data.type.value=='律师服务'||data.type.value=='知识产权'">
+        <div class="imgs" id="imgsList">
+            <div class="imgs-item1"  @click="selectImg(this)"  v-if="data.state.code==11&&typeof data.lawyerSureTime=='undefined'" >
+                <div>
+                    <!-- <img src="../images/upload-pic.png" id="upbtn"> -->
+                </div>
+                <div>
+                    <span>
+                        <!--<input id="fileId" type="file" accept="image/png,image/gif" name="file" @change="selectImgH5(this)"/>-->
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+        <!--<section class="section5" v-if="data.state.code==14||data.state.code==20">-->
+            <!--&lt;!&ndash;待确认价格9 待付款10&ndash;&gt;-->
+            <!--<div @click="del_dialog()"  class='del'>-->
+                <!--<span v-html="btnText"></span>-->
+            <!--</div>-->
+        <!--</section>-->
+        <section class="section5" v-if="data.state.code!=9&&data.state.code!=10 && data.commented!=1">
+            <!--待确认价格9 待付款10-->
+            <div   @click="confirm_dialog()">
+                <span v-html="btnText"></span>
+            </div>
+        </section>
+        <section class="section6" v-if="data.commented==1 && data.state.code==14">
+            <!-- 有评价是显示  -->
+            <div class="evaluate-btn-box" @click="go_evaluateList($event.currentTarget,data.orderNo)">
+                <span class="evaluate-btn">查看评价</span>
+            </div>
+        </section>
+
+</div>
+<div id="defaultFix" class="default-fix"></div>
+</body>
+</html>
+<script src="../libs/jquery.min.js"></script>
+<script src="../libs/fastclick.min.js"></script>
+<script src="../libs/common.js"></script>
+<script src="../libs/mui.min.js"></script>
+<script src="../libs/mui.zoom.js"></script>
+<script src="../libs/mui.previewimage.js"></script>
+<script src="../libs/vue.min.js"></script>
+<script src="../plugins/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+<script src="../scripts/lawyer-order-details.js?v=lz201707151876"></script>
+<script src="https://hm.baidu.com/hm.js?d38acaa925a21848e070a28eeca2b21c"></script>

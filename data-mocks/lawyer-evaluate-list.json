@@ -1,0 +1,27 @@
+{
+  "code": 1,
+  "msg": "评价列表",
+  "data":
+  [
+    {
+      "commenterName": "评价者1",
+      "commenterLogo": "http://localhost:63342/h5-lawyer/images/userImg.png",
+      "stars":3,
+      "commentTime":"2017-09-06  22:11:12",
+      "labels": [
+        {
+          "name": "很好"
+        },
+        {
+          "name": "真的很好"
+        },
+        {
+          "name": "太棒了"
+        },
+        {
+          "name": "搞个锤子"
+        }
+      ]
+    }
+  ]
+}

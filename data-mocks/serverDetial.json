@@ -1,0 +1,47 @@
+{
+  "code":1,
+  "msg": "服务详情",
+  "data": {
+    "categoryId":0,
+    "priceConfirm":1,
+    "name": "非快速咨询服务",
+    "priceStart":"100",
+    "priceEnd":"1000",
+    "originalPrice":"99999",
+    "specs": [
+      {
+        "specName": "轮次",
+        "specAttrs": [
+          {
+            "specAttrName": "A轮"
+          },
+          {
+            "specAttrName": "B轮"
+          },
+          {
+            "specAttrName": "C轮"
+          },
+          {
+            "specAttrName": "D轮"
+          }
+        ]
+      },
+      {
+        "specName": "规模",
+        "specAttrs": [
+          {
+            "specAttrName": "大规模"
+          },
+          {
+            "specAttrName": "小规模"
+          }
+        ]
+      }
+    ],
+    "descr":"<p>就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿</p>",
+    "content":"<p>就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿</p>",
+    "serviceTimeDesc":"<p>就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿</p>",
+    "submitInformation":"<p>就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿</p>",
+    "bizFaq":"<p>就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿就不穿</p>"
+  }
+}

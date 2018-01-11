@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>评价详情</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../styles/css/mui.min.css" />
+    <link rel="stylesheet" href="../styles/css/null-page.css?v=lz201707151879">
+    <link rel="stylesheet" href="../styles/css/base-evaluate-list.css?v=lz201707151879">
+    <link rel="stylesheet" href="../styles/css/lawyer-order-evaluate-list.css?v=lz201707151879">
+    <script src="../libs/reset-min.js"></script>
+    <script src="../libs/base-min.js"></script>
+</head>
+<body>
+    <div class="page-box" id="pageContainer">
+        <div class="null-box" v-if="pageObj.nullPage">
+            <div class="null-box-content">
+                <img src="../images/null-logo.png" class="null-img">
+                <p class="null-txt">暂无评价</p>
+            </div>
+        </div>
+        <div class="list-box" v-if="pageObj.listPage">
+            <ul class="evaluate-list-box Thread" >
+                <li class="">
+                    <div class="evaluate-info clearfix">
+                        <div class="p-img" >
+                            <img :src="data.commenterLogo">
+                        </div>
+                        <div class="p-info">
+                            <span class="p-name" v-html="data.commenterName"></span>
+                            <span class="p-time" v-html="data.commentTime"></span>
+                        </div>
+                        <div class="p-e-level clearfix">
+                            <span class="start startfull" v-for="info in getNum(data.stars)"></span>
+                            <span class="start" v-for="info in (5-getNum(data.stars))"></span>
+                        </div>
+                    </div>
+                    <div class="evaluate-tab-box clearfix" >
+                            <span class="evaluate-tab" v-for="tabinfo in data.labels" v-if="tabinfo.name">
+                                <em v-html="tabinfo.name" ></em>
+                            </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="defaultFix" class="default-fix" v-show="pageObj.defalutFix"></div>
+    </div>
+</body>
+</html>
+<script src="../plugins/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+<script src="../libs/jquery.min.js"></script>
+<script src="../libs/fastclick.min.js"></script>
+<script src="../libs/mui.min.js"></script>
+<script src="../libs/common.js"></script>
+<script src="../libs/vue.min.js"></script>
+<script src="../scripts/lawyer-order-evaluate-list.js?v=lz201707151876"></script>

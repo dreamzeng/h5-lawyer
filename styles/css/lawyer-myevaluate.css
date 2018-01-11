@@ -1,0 +1,213 @@
+/********* global style ************/
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    display: block;
+}
+ul{
+    list-style:none;
+}
+*,*:before,*:after{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*:focus {
+    outline: none;
+}
+.Thread{
+    position: relative;
+}
+.Thread:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    border: 1px solid #ddd;
+    width: 200%;
+    height: 200%;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clearfix:after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+.default-fix {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 30;
+    top: 0;
+    left: 0;
+}
+
+/************* page style ****************/
+#none-info{
+   height: 100%;
+}
+.section1{
+    position: relative;
+    padding: 0.2rem 0;
+    background-color: #f2f2f2;
+    width: 100%;
+    overflow-x:hidden;
+}
+.lawyer-evaluate{
+    position: relative;
+    padding: 0.28rem 0.3rem 0.3rem;
+    background-color: #fff;
+}
+.lawyer-evaluate:before,.lawyer-evaluate:after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    border: 0.75px solid #ddd;
+    width: 200%;
+    height: 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.lawyer-evaluate:after{
+    top:auto;
+    left: 0;
+    width: 300%;
+    bottom:-1px;
+}
+.lawyer-img{
+    position: absolute;
+    left:0.3rem;
+    margin-right: 0.36rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #333;
+}
+.lawyer-img img{
+    width: 100%;
+    height: 100%;
+}
+.evaluate-box{
+    margin-left: 1.56rem;
+}
+.start-box{
+    margin-top: 0.2rem;
+}
+.start{
+    float: left;
+    width: 0.38rem;
+    height: 0.38rem;
+    margin-right: 0.14rem;
+    background: url('../../images/start-null-b.png') no-repeat;
+    background-size: contain;
+}
+.start.startfull{
+    background-image: url('../../images/start-full-b.png');
+}
+.evaluate-txt{
+    margin: 0.2rem 0 0;
+    font-size: 0.26rem;
+    color: #999;
+}
+.lawyer-evaluate .evaluate-tab{
+    float: left;
+    position: relative;
+    margin-right: 0.13rem;
+    color: #455b95;
+    width: 1.36rem;
+    display: block;
+    margin-top: 0.2rem;
+}
+.evaluate-tab-txt{
+    color: #455b95;
+    font-size: 0.24rem;
+    width: 1.36rem;
+    height: 0.44rem;
+    line-height: 0.48rem;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+.evaluate-tab-box{
+    position: relative;
+}
+.evaluate-tab-more{
+    position: absolute;
+    top:0.29rem;
+    right: 0;
+    width: 0.2rem;
+    height: 0.25rem;
+    background:url('../../images/Arrow2.png') no-repeat;
+    background-size: contain;
+}
+/************** evaluate list style *******************/
+.section2-box{
+    position: relative;
+}
+.section2-box:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    border: 0.75px solid #ddd;
+    width: 200%;
+    height: 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.evaluate-list-more{
+    position: relative;
+    padding: 0 0.3rem;
+    display: block;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.26rem;
+}
+.evaluate-list-more:before{
+    content: "";
+    margin-right: 0.1rem;
+    display: inline-block;
+    width: 0.04rem;
+    height: 0.26rem;
+    background-color: #435A95;
+    vertical-align: -2px;
+}
+.evaluate-list-more:after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    left: 0;
+    border: 0.75px solid #ddd;
+    width: 200%;
+    height: 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.evaluate-list-more-logo{
+    position: absolute;
+    top:35%;
+    right: 0.3rem;
+    width: 0.2rem;
+    height: 0.25rem;
+    background:url('../../images/Arrow2.png') no-repeat;
+    background-size: contain;
+}

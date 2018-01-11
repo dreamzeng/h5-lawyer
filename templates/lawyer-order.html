@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>律师-我的订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../styles/css/mui.min.css">
+    <link rel="stylesheet" href="../styles/css/lawyer-order.css?v=lz201707151882">
+</head>
+
+<body>
+    <div class="mui-content">
+        <div id="slider" class="mui-slider mui-fullscreen">
+            <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                <div class="mui-scroll">
+                   <a class="mui-control-item mui-active" href="#item1mobile">
+                       待处理<span>|</span>
+                    </a>
+                    <a class="mui-control-item" href="#item2mobile">
+                         全部
+                    </a>
+                 
+                </div>
+            </div>
+            <div class="mui-pull-top-pocket mui-block"><div class="mui-pull"><div class="mui-pull-loading mui-icon mui-icon-pulldown"></div><div class="mui-pull-caption">下拉可以刷新</div></div></div>
+            <div class="mui-slider-group">
+                <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                    <div id="scroll1" class="mui-scroll-wrapper" style="">
+                        <div class="mui-scroll" data-id = "srcoll1">
+                          <div class="mui-loading hide">
+                                <div class="mui-spinner">
+                                </div>
+                            </div>
+                              <div class="no-order hide">
+                                <p>还没有订单消息</p>
+                            </div> 
+                            <div class="mui-table-wrap mui-table-first" type=1>
+                                    
+                                </div>
+                          
+                       
+                        </div>
+                    </div>
+                </div>
+                <div id="item2mobile" class="mui-slider-item mui-control-content">
+                    <div id="scroll2" class="mui-scroll-wrapper">
+                        <div class="mui-scroll" data-id = "srcoll2">
+                            <div class="mui-loading hide">
+                                <div class="mui-spinner">
+                                </div>
+                            </div>
+                              <div class="no-order hide">
+                                <p>还没有订单消息</p>
+                            </div> 
+                            <div class="mui-table-wrap mui-table-first" type=2>
+                                    
+                                </div>
+                          
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+<script src="../libs/jquery.min.js"></script>
+<script src="../libs/common.js"></script>
+<script src="../libs/mui.min.js"></script>
+<script src="../libs/mui.pullToRefresh.js"></script>
+<script src="../libs/mui.pullToRefresh.material.js"></script>
+<script src="../scripts/lawyer-order.js?v=lz201707151893"></script>
+<script src="https://hm.baidu.com/hm.js?d38acaa925a21848e070a28eeca2b21c"></script>
+</body>
+</html>

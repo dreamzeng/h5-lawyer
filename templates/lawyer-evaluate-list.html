@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>全部评价</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../styles/css/mui.min.css" />
+    <link rel="stylesheet" href="../styles/css/null-page.css?v=lz201707151879">
+    <link rel="stylesheet" href="../styles/css/base-evaluate-list.css?v=lz201707151879">
+    <link rel="stylesheet" href="../styles/css/lawyer-evaluate-list.html.css?v=lz201707151879">
+    <script src="../libs/reset-min.js"></script>
+    <script src="../libs/base-min.js"></script>
+</head>
+<body>
+    <div class="page-box" id="pageContainer">
+        <div>
+            <div class="nav-box">
+                <nav>
+                    <div class="Thread clearfix">
+                        <span :class="pageObj.tabIndex==0?'nav_tab active':'nav_tab'" @click="selTab(0,0)" >全部(<em v-html="dataTab.allCount">0</em>)</span>
+                        <span :class="pageObj.tabIndex==1?'nav_tab active':'nav_tab'" @click="selTab(1,1)" >好评(<em v-html="dataTab.goodCount">0</em>)</span>
+                        <span :class="pageObj.tabIndex==2?'nav_tab active':'nav_tab'" @click="selTab(2,2)" >中评(<em v-html="dataTab.mediumCount">0</em>)</span>
+                        <span :class="pageObj.tabIndex==3?'nav_tab active':'nav_tab'" @click="selTab(3,3)" >差评(<em v-html="dataTab.badCount">0</em>)</span>
+                    </div>
+                </nav>
+            </div>
+            <!--<div id="pullrefresh" class="mui-content mui-scroll-wrapper"  v-show="pageObj.listPage">-->
+                <!--<div class="mui-scroll">-->
+                    <ul class="evaluate-list-box">
+                        <li class=""  v-for="(item,index) in dataList.items">
+                            <div class="evaluate-info clearfix">
+                                <div class="p-img">
+                                    <img :src="item.commenterLogo">
+                                </div>
+                                <div class="p-info">
+                                    <span class="p-name" v-html="item.commenterName"></span>
+                                    <span class="p-time" v-html="item.commentTime"></span>
+                                </div>
+                                <div class="p-e-level clearfix">
+                                    <span class="start startfull" v-for="info in getNum(item.stars)"></span>
+                                    <span class="start" v-for="info in (5-getNum(item.stars))"></span>
+                                </div>
+                            </div>
+                            <div class="evaluate-tab-box clearfix">
+                                <span class="evaluate-tab" v-for="tabinfo in item.labels">
+                                    <em v-html="tabinfo.name"></em>
+                                </span>
+                            </div>
+                            <div class="order-box clearfix" @click="go_severDetail($event.currentTarget)" v-bind:data-serverId="item.goodsUuid">
+                                <img :src="item.goodsImageUrl" class="order-img">
+                                <div class="order-info">
+                                    <p class="order-info-txt"><em v-html="item.goodsName"></em> <em v-if="item.specCombDesc" v-html="'('+item.specCombDesc+')'"></em></p>
+                                    <p class="order-info-price">￥<em v-html="item.amount"></em></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div id="defaultFix" class="default-fix" v-show="pageObj.defalutFix"></div>
+    </div>
+</body>
+</html>
+<script src="../plugins/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+<script src="../libs/jquery.min.js"></script>
+<script src="../libs/fastclick.min.js"></script>
+<script src="../libs/mui.min.js"></script>
+<script src="../libs/common.js"></script>
+<script src="../libs/vue.min.js"></script>
+<script src="../scripts/lawyer-evaluate-list.html.js?v=lz201707151876"></script>
